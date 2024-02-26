@@ -12,6 +12,8 @@ import re
 from config import *
 
 rtl_433_cmd = "/usr/local/bin/rtl_433 -F json"
+#if local/non docker
+#rtl_433_cmd = "/usr/bin/rtl_433 -F json"
 
 important_rtl_output_re = re.compile("^(Found|Tuned)")
 
@@ -46,7 +48,8 @@ def on_log(client, obj, level, string):
     print(string)
 
 # Setup MQTT connection
-mqttc = mqtt.Client()
+# Whilst we load paho-mqtt version 2, we switch back to version 1
+mqttc = mqtt.Client(mqtt.CallbackAPIVersion.VERSION1)
 
 mqttc.on_connect = on_connect
 mqttc.on_subscribe = on_subscribe

@@ -1,0 +1,1 @@
+docker run --name rtl_433 -d --restart unless-stopped --privileged -v /dev/bus/usb:/dev/bus/usb  rtl433-mqtt-gateway
