@@ -1,12 +1,14 @@
 # RTL433 to mqtt gateway
 
+See [here](README-Updates.md) for updates for this fork of the main project
+
 This small script is a cheap and easy way to start with IoT projects.
 By using the great rtl_433 software and a cheap RTL-SDR receiver it will listen to all kinds of devices transmitting at the 433,92 Mhz frequency.
 
 Quite likely it will receive information from weatherstations in your area,
 if you don't own one, your neighbours might!
 It will also receive signals from remote controls that are popular to use to
-control the lights.
+control the lights.  Its also very popular with car TPMS (tyre pressure monitoring systems)
 
 It's one way. You can receive a lot of information, but you can not send any!
 
